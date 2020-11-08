@@ -3,25 +3,28 @@ package com.martins.workshopmongodb.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "budget")
 public class Budget implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
-	
-	
+
+	@Id
 	private String id;
 	private Double value;
-	private Date month;
+	private Date moment;
 
 	public Budget() {
 
 	}
 
-	public Budget(String id, Double value, Date month) {
+	public Budget(String id, Double value, Date moment) {
 		super();
 		this.id = id;
 		this.value = value;
-		this.month = month;
+		this.moment = moment;
 	}
 
 	public String getId() {
@@ -39,13 +42,13 @@ public class Budget implements Serializable {
 	public void setValue(Double value) {
 		this.value = value;
 	}
-
+	
 	public Date getMonth() {
-		return month;
+		return moment;
 	}
 
-	public void setMonth(Date month) {
-		this.month = month;
+	public void setMonth(Date moment) {
+		this.moment = moment;
 	}
 
 	@Override

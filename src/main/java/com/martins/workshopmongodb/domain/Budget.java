@@ -1,7 +1,9 @@
 package com.martins.workshopmongodb.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,6 +18,7 @@ public class Budget implements Serializable {
 	private Double value;
 	private Date moment;
 
+	
 	public Budget() {
 
 	}
@@ -25,6 +28,7 @@ public class Budget implements Serializable {
 		this.id = id;
 		this.value = value;
 		this.moment = moment;
+
 	}
 
 	public String getId() {
@@ -42,7 +46,7 @@ public class Budget implements Serializable {
 	public void setValue(Double value) {
 		this.value = value;
 	}
-	
+
 	public Date getMonth() {
 		return moment;
 	}
@@ -50,6 +54,10 @@ public class Budget implements Serializable {
 	public void setMonth(Date moment) {
 		this.moment = moment;
 	}
+
+	
+
+
 
 	@Override
 	public int hashCode() {

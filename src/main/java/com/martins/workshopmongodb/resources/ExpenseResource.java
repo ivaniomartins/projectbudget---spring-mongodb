@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.martins.workshopmongodb.domain.Budget;
 import com.martins.workshopmongodb.domain.Expense;
 import com.martins.workshopmongodb.services.ExpenseService;
 

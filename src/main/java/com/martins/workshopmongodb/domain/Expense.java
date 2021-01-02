@@ -10,6 +10,7 @@ public class Expense {
 	
 private Double value;
 private Integer qtdPorcion;
+private Double vlPorcion = 0.0;
 
 private List<Budget> budget = new ArrayList<>();
 
@@ -22,6 +23,7 @@ public Expense(Double value, Integer qtdPorcion) {
 
 	this.value = value;
 	this.qtdPorcion = qtdPorcion;
+	this.porcionValue(this.qtdPorcion, this.value);
 	
 }
 
@@ -45,15 +47,30 @@ public void setQtdPorcion(Integer qtdPorcion) {
 	this.qtdPorcion = qtdPorcion;
 }
 
+
+
+public Double getVlPorcion() {
+	return vlPorcion;
+}
+
+
+public void setVlPorcion(Double vlPorcion) {
+	this.vlPorcion = vlPorcion;
+}
+
+
+
+
 public List<Budget> getBudget() {
 	return budget;
 }
 
+
 /*
- * método para returno do valor das parcelas
+ * método para retornar o valor das parcelas
  */
 public Double porcionValue(Integer qtdPorcion, Double value) {
-	return this.getValue()/this.getQtdPorcion();
+	return this.vlPorcion = this.value/this.qtdPorcion;
 }
 
 
